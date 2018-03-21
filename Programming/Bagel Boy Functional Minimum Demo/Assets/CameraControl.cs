@@ -14,6 +14,9 @@ public class CameraControl : MonoBehaviour {
 
 	public Transform pivot;
 
+	public float maxViewAngle;
+	public float minViewAngle;
+
 	// Use this for initialization
 	void Start () {
 		if (!useOffsetValues) {
@@ -34,6 +37,13 @@ public class CameraControl : MonoBehaviour {
 
 		float vertical = Input.GetAxis ("Mouse Y") * rotateSpeed;
 		pivot.Rotate (-vertical, 0, 0);
+
+		if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f) {
+			pivot.rotation = Quaternion.Euler (maxViewAngle, 0, 0);
+		}
+		if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < minViewAngle) {
+			pivot.rotation = Quaternion.Euler (minViewAngle, 0, 0);
+		}
 
 		float desiredYAngle = target.eulerAngles.y;
 		float desiredXAngle = pivot.eulerAngles.x;

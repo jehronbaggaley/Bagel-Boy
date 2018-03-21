@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		float yStore = moveDirection.y;
+		moveDirection.y = 0;
 		moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
 		moveDirection = moveDirection.normalized * moveSpeed;
 		moveDirection.y = yStore;

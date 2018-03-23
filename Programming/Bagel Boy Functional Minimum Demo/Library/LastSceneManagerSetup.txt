@@ -1,5 +1,4 @@
 sceneSetups:
-- path: C:/Users/teancumprice/Documents/GitHub/Bagel-Boy/Programming/LeonNguyen/Game
-    Menu Unity/Assets/Funtion front menu.unity
+- path: Assets/Bagel Boy Test.unity
   isLoaded: 1
   isActive: 1

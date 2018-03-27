@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/Game/Pause Menu/PauseMenu.unity
+- path: Assets/Main Menu/Funtion front menu.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Game/Bagel Boy Test.unity
+  isLoaded: 0
+  isActive: 0

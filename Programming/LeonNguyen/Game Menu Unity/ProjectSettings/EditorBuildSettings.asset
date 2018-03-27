@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main Menu/Funtion front menu.unity
+    guid: e53e9315eea15ce428c507c1cbbfd740
+  - enabled: 1
+    path: Assets/Game/Bagel Boy Test.unity
+    guid: 56fcb70b50afe4bf394d71705c5da010

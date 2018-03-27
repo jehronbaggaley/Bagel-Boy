@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Funtion front menu.unity
+- path: Assets/Game/Pause Menu/PauseMenu.unity
   isLoaded: 1
   isActive: 1

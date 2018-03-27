@@ -45,7 +45,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 106
+=======
   controlID: 47
+>>>>>>> 9d5e1892a3b272ad5f0c4475732f73cf75ba521f
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +214,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 50
+=======
   controlID: 48
+>>>>>>> 9d5e1892a3b272ad5f0c4475732f73cf75ba521f
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +242,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 51
+=======
   controlID: 49
+>>>>>>> 9d5e1892a3b272ad5f0c4475732f73cf75ba521f
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -518,9 +530,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+    m_SelectedIDs: 22280000
+    m_LastClickedID: 10274
+    m_ExpandedIDs: 86fbffff000000002a280000
+=======
     m_SelectedIDs: 1c280000
     m_LastClickedID: 10268
     m_ExpandedIDs: 00000000222800002a280000
+>>>>>>> 9d5e1892a3b272ad5f0c4475732f73cf75ba521f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -570,14 +588,14 @@ MonoBehaviour:
     height: 410
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 141.87520672338286
+  lastFramingTime: 131.81025523769515
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 496.8363, y: 192.60345, z: 0.25469634}
+    m_Target: {x: 23.632257, y: 2.054956, z: 0}
     speed: 2
-    m_Value: {x: 496.8363, y: 192.60345, z: 0.25469634}
+    m_Value: {x: 23.632257, y: 2.054956, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -605,9 +623,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 531.7129
+    m_Target: 22
     speed: 2
-    m_Value: 531.7129
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2

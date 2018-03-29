@@ -41,7 +41,7 @@ public class CameraControl : MonoBehaviour {
 		if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f) {
 			pivot.rotation = Quaternion.Euler (maxViewAngle, 0, 0);
 		}
-		if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < minViewAngle) {
+		if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360 + minViewAngle) {
 			pivot.rotation = Quaternion.Euler (minViewAngle, 0, 0);
 		}
 

@@ -8,7 +8,10 @@ public class HurtPlayer : MonoBehaviour {
 
 	private void OnTriggerEnter (Collider other) {
 		if (other.gameObject.name == "PlayerController") {
-			FindObjectOfType<HealthManager>().HurtPlayer(damageDeal);
+			Vector3 hitDirection = other.transform.position - transform.position;
+			hitDirection = hitDirection.normalized;
+
+			FindObjectOfType<HealthManager>().HurtPlayer(damageDeal, hitDirection);
 		}
 	}
 }

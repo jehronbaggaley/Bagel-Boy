@@ -15,8 +15,6 @@ public class PlayerController : MonoBehaviour {
 	public float knockBackTime;
 	private float knockBackCounter;
 
-
-
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController> ();

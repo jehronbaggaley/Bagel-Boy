@@ -586,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &155752525
 Transform:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 765223628034a624195b360b761919d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 765223628034a624195b360b761919d7, type: 3}
@@ -3943,6 +3943,8 @@ MonoBehaviour:
   jumpForce: 30
   controller: {fileID: 0}
   gravityScale: 10
+  knockBackForce: 40
+  knockBackTime: 0.5
 --- !u!143 &1293262623
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4042,6 +4044,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currHealth: 0
+  thePlayer: {fileID: 0}
+  InvincibilityLength: 0.5
 --- !u!1 &1348160806
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,6 +5096,8 @@ MonoBehaviour:
   jumpForce: 0
   controller: {fileID: 0}
   gravityScale: 0
+  knockBackForce: 0
+  knockBackTime: 0
 --- !u!143 &1620553740
 CharacterController:
   m_ObjectHideFlags: 0

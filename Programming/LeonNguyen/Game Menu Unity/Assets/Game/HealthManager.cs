@@ -25,7 +25,7 @@ public class HealthManager : MonoBehaviour {
 
 		thePlayer = FindObjectOfType<PlayerController>();
 
-		playerHealth.text = "" + currHealth + "/" +maxHealth;
+		playerHealth.text = "Health: " + currHealth + "/" +maxHealth;
 	}
 
 	void Update () {
@@ -41,7 +41,7 @@ public class HealthManager : MonoBehaviour {
 				playerRenderer.enabled = true;
 			}
 		}
-		playerHealth.text = "" + currHealth + "/" +maxHealth;
+		playerHealth.text = "Health: " + currHealth + "/" +maxHealth;
 	}
 
 	public void HurtPlayer(int damage, Vector3 direction) {

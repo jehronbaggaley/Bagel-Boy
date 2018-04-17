@@ -19,11 +19,17 @@ public class HealthManager : MonoBehaviour {
 
 	public Text playerHealth;
 
+	private bool isRespawning;
+	private Vector3 respawnPoint;
+	public float respawnLength;
+
 	// Use this for initialization
 	void Start () {
 		currHealth = maxHealth;
 
-		thePlayer = FindObjectOfType<PlayerController>();
+		//thePlayer = FindObjectOfType<PlayerController>();
+
+		respawnPoint = thePlayer.transform.position;
 
 		playerHealth.text = "Health: " + currHealth + "/" +maxHealth;
 	}
@@ -48,12 +54,17 @@ public class HealthManager : MonoBehaviour {
 		if (InvincibilityCounter <= 0) {
 			currHealth -= damage;
 
-			thePlayer.Knockback(direction);
+			if (currHealth <= 0) {
+				Respawn ();
+			} else {
+				thePlayer.Knockback (direction);
 
-			InvincibilityCounter = InvincibilityLength;
+				InvincibilityCounter = InvincibilityLength;
 
-			playerRenderer.enabled = false;
-			flashCounter = flashLength;
+				playerRenderer.enabled = false;
+
+				flashCounter = flashLength;
+			}
 		}
 	}
 	public void HealPlayer(int healing) {
@@ -61,5 +72,25 @@ public class HealthManager : MonoBehaviour {
 		if (currHealth > maxHealth) {
 			currHealth = maxHealth;
 		}
+	}
+	public void Respawn(){
+		if (!isRespawning) {
+			StartCoroutine ("RespawnCo");
+		}
+	}
+	public IEnumerator RespawnCo(){
+		isRespawning = true
+		thePlayer.gameObject.SetActive(false);
+		
+		yield return new WaitForSeconds(respawnLength);
+
+		thePlayer.gameObject.SetActive(true);
+		isRespawning = false
+		thePlayer.transform.position = respawnPoint;
+		currHealth = maxHealth;
+
+		InvincibilityCounter = InvincibilityLength;
+		playerRenderer.enabled = false;
+		flashCounter = flashLength;
 	}
 }

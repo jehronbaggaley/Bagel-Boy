@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Game/Bagel Boy Test.unity
-  isLoaded: 1
-  isActive: 1

@@ -96,4 +96,8 @@ public class HealthManager : MonoBehaviour {
 		playerRenderer.enabled = false;
 		flashCounter = flashLength;
 	}
+
+	public void SetSpawnPoint(Vector3 newPosition){
+		respawnPoint = newPosition;
+	}
 }

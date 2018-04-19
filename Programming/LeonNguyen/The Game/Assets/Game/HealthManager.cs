@@ -64,6 +64,8 @@ public class HealthManager : MonoBehaviour {
 				playerRenderer.enabled = false;
 
 				flashCounter = flashLength;
+
+				FindObjectOfType<AudioPlayer>().Hurt();
 			}
 		}
 	}
@@ -79,13 +81,14 @@ public class HealthManager : MonoBehaviour {
 		}
 	}
 	public IEnumerator RespawnCo(){
-		isRespawning = true
+		isRespawning = true;
 		thePlayer.gameObject.SetActive(false);
+		FindObjectOfType<AudioPlayer>().Death();
 		
 		yield return new WaitForSeconds(respawnLength);
 
 		thePlayer.gameObject.SetActive(true);
-		isRespawning = false
+		isRespawning = false;
 		thePlayer.transform.position = respawnPoint;
 		currHealth = maxHealth;
 

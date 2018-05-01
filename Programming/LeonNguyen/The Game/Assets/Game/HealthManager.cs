@@ -65,7 +65,7 @@ public class HealthManager : MonoBehaviour {
 
 				flashCounter = flashLength;
 
-				FindObjectOfType<AudioPlayer>().Hurt();
+				//FindObjectOfType<AudioPlayer>().Hurt();
 			}
 		}
 	}
@@ -83,7 +83,7 @@ public class HealthManager : MonoBehaviour {
 	public IEnumerator RespawnCo(){
 		isRespawning = true;
 		thePlayer.gameObject.SetActive(false);
-		FindObjectOfType<AudioPlayer>().Death();
+		//FindObjectOfType<AudioPlayer>().Death();
 		
 		yield return new WaitForSeconds(respawnLength);
 

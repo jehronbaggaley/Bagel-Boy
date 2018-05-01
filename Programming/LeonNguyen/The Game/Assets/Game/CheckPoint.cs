@@ -6,6 +6,11 @@ public class CheckPoint : MonoBehaviour {
 
 	public HealthManager theHealthMan;
 
+	public Renderer theRend;
+
+	public Material cpOff;
+	public Material cpOn;
+
 	// Use this for initialization
 	void Start () {
 		theHealthMan = FindObjectOfType<HealthManager>();
@@ -16,11 +21,22 @@ public class CheckPoint : MonoBehaviour {
 		
 	}
 
+	public void CheckpointOn(){
+		CheckPoint[] checkpoints = FindObjectsOfType<CheckPoint>();
+		foreach (CheckPoint cp in checkpoints) {
+			cp.CheckpointOff();
+		}
+
+		theRend.material = cpOn;
+	}
+	public void CheckpointOff(){
+		theRend.material = cpOff;
+	}
+
 	private void OnTriggerEnter(Collider other) {
-		Debug.Log("Hit");
 		if (other.gameObject.name == "PlayerController") {
-			Debug.Log("Player");
 			theHealthMan.SetSpawnPoint (transform.position);
+			CheckpointOn ();
 		}
 	}
 }

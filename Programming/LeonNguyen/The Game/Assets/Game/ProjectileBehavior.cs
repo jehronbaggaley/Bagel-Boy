@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour {
 
 	public CharacterController controller;
-	public float gravityScale'
+	public float gravityScale;
 	public int speed;
 
 	public Vector3 moveDirection;

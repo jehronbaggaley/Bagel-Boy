@@ -39,7 +39,7 @@ public class ProjectileBehavior : MonoBehaviour {
 			Vector3 hitDirection = other.transform.position - transform.position;
 			hitDirection = hitDirection.normalized;
 
-			EnemyHealth enemy;
+			EnemyHealth enemy = other.gameObject.GetComponent("EnemyHealth") as EnemyHealth;
 
 			enemy.HurtPlayer(damageDeal, hitDirection);
 		}

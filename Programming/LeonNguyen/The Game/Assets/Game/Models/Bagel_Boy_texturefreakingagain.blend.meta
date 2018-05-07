@@ -1,38 +1,43 @@
 fileFormatVersion: 2
-guid: a3b1fd29a73c32b4da1219fe4adaee51
-timeCreated: 1524162702
-licenseType: Free
+guid: a410526f85c960d498d42edd93b58ebd
+timeCreated: 1525716714
+licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Armature
-    100002: Body
-    100004: Cylinder
-    100006: Foot_L
-    100008: Foot_R
-    100010: Head
-    100012: LowerLeg_L
-    100014: LowerLeg_R
-    100016: //RootNode
-    100018: UpperLeg_L
-    100020: UpperLeg_R
+    100002: Bagel_Boy
+    100004: //RootNode
+    100006: Body
+    100008: Foot_L
+    100010: Foot_R
+    100012: LegIK_L
+    100014: LegIK_R
+    100016: LowerLeg_L
+    100018: LowerLeg_R
+    100020: UpperLeg_L
+    100022: UpperLeg_R
     400000: Armature
-    400002: Body
-    400004: Cylinder
-    400006: Foot_L
-    400008: Foot_R
-    400010: Head
-    400012: LowerLeg_L
-    400014: LowerLeg_R
-    400016: //RootNode
-    400018: UpperLeg_L
-    400020: UpperLeg_R
-    2100000: unnamed
-    4300000: Cylinder
+    400002: Bagel_Boy
+    400004: //RootNode
+    400006: Body
+    400008: Foot_L
+    400010: Foot_R
+    400012: LegIK_L
+    400014: LegIK_R
+    400016: LowerLeg_L
+    400018: LowerLeg_R
+    400020: UpperLeg_L
+    400022: UpperLeg_R
+    2100000: Glasses__Bagel_Boy_Texture_whyyy
+    2100002: Legs__Bagel_Boy_Texture_whyyy
+    2100004: Bagel__Bagel_Boy_Texture_whyyy
+    2100006: Glasses_wire__Bagel_Boy_Texture_whyyy
+    4300000: Bagel_Boy
     7400000: Default Take
-    7400002: Walk
+    7400002: walk
     9500000: //RootNode
-    13700000: Cylinder
+    13700000: Bagel_Boy
   externalObjects: {}
   materials:
     importMaterials: 1

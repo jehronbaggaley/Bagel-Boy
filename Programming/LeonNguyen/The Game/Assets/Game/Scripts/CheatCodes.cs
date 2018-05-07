@@ -10,9 +10,13 @@ public class CheatCodes : MonoBehaviour {
 	public GameObject spider;
 	public GameObject active;
 
+	public PlayerController player;
+
 	// Use this for initialization
 	void Start () {
 		active = bagelBoy;
+
+		player = GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +33,8 @@ public class CheatCodes : MonoBehaviour {
 				active.SetActive (false);
 				lambo.SetActive (true);
 				active = lambo;
+				player.moveSpeed = 100;
+				player.jumpForce = 5;
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.G)) {

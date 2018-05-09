@@ -16,7 +16,7 @@ public class CheatCodes : MonoBehaviour {
 	void Start () {
 		active = bagelBoy;
 
-		player = GetComponent<PlayerController> ();
+		player = GetComponent<PlayerController>();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +26,9 @@ public class CheatCodes : MonoBehaviour {
 				active.SetActive (false);
 				bagelBoy.SetActive (true);
 				active = bagelBoy;
+                player.moveSpeed = 50;
+                player.jumpForce = 30;
+            
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.L)) {
@@ -42,6 +45,8 @@ public class CheatCodes : MonoBehaviour {
 				active.SetActive (false);
 				goku.SetActive (true);
 				active = goku;
+                player.moveSpeed = 50;
+                player.jumpForce = 40;
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.M)) {
@@ -49,6 +54,8 @@ public class CheatCodes : MonoBehaviour {
 				active.SetActive (false);
 				spider.SetActive (true);
 				active = spider;
+                player.moveSpeed = 65;
+                player.jumpForce = 75;
 			}
 		}
 	}

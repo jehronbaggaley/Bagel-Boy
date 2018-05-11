@@ -24,7 +24,10 @@ GameObject:
   - component: {fileID: 95925562446463338}
   - component: {fileID: 136785985887261730}
   - component: {fileID: 64194389579572940}
-  - component: {fileID: 135293229981425712}
+  - component: {fileID: 143773695688376060}
+  - component: {fileID: 114858261247192686}
+  - component: {fileID: 114679200041180906}
+  - component: {fileID: 114864757939327782}
   m_Layer: 0
   m_Name: Pillsbury_Dough_Demon_PlusTexture
   m_TagString: Untagged
@@ -59,9 +62,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cac9657026be556488b68ca6c18dcd23, type: 3}
-  - {fileID: 2100002, guid: cac9657026be556488b68ca6c18dcd23, type: 3}
-  - {fileID: 2100004, guid: cac9657026be556488b68ca6c18dcd23, type: 3}
+  - {fileID: 2100000, guid: bdc2a87729fb4da4b8e4ac7d5117172f, type: 2}
+  - {fileID: 2100000, guid: bdc2a87729fb4da4b8e4ac7d5117172f, type: 2}
+  - {fileID: 2100000, guid: bdc2a87729fb4da4b8e4ac7d5117172f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,18 +122,51 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!135 &135293229981425712
-SphereCollider:
+--- !u!114 &114679200041180906
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1667361233535194}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.86815614
-  m_Center: {x: 0, y: -0.015129004, z: 1.2600104}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46deac3e1ed0de84f87ca503f3b71063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currHealth: 0
+  InvincibilityLength: 0.2
+  enemyRenderer: {fileID: 23893561314438646}
+  flashLength: 0.1
+--- !u!114 &114858261247192686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1667361233535194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8950c90ac82c95647b64cafab88ea90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  xOff: -90
+  zOff: 0
+  controller: {fileID: 143773695688376060}
+  moveSpeed: 30
+  gravityScale: 5
+--- !u!114 &114864757939327782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1667361233535194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd4dde6819d44d43b84fa2b4ad8caf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDeal: 1
 --- !u!136 &136785985887261730
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -139,8 +175,25 @@ CapsuleCollider:
   m_GameObject: {fileID: 1667361233535194}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.6
   m_Height: 1.9
   m_Direction: 2
   m_Center: {x: 0, y: -0.015129004, z: 1.2600104}
+--- !u!143 &143773695688376060
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1667361233535194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.74
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 1.26}

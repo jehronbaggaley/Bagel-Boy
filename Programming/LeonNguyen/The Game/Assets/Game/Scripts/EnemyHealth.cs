@@ -42,9 +42,12 @@ public class EnemyHealth : MonoBehaviour {
 			currHealth -= damage;
 
 			if (currHealth <= 0) {
+				FindObjectOfType<AudioPlayer>().EnemyDeath();
 				Destroy (this.gameObject);
 			} else {
 				//SOMETHING.Knockback (direction);
+
+				FindObjectOfType<AudioPlayer>().EnemyHurt();
 
 				InvincibilityCounter = InvincibilityLength;
 

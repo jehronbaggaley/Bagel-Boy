@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour {
 			GameObject projectile = Instantiate (prefab) as GameObject;
 			projectile.transform.rotation = camTrans.rotation;
 			projectile.transform.position = playerTrans.position + camTrans.forward * 2;
+			FindObjectOfType<AudioPlayer>().Throw();
 		}
 	}
 }

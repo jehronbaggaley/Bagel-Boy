@@ -6,6 +6,9 @@ public class AudioPlayer : MonoBehaviour {
 
 	public AudioClip hurtSound;
 	public AudioClip deathSound;
+	public AudioClip projectile;
+	public AudioClip enemyHurt;
+	public AudioClip enemyDeath;
 
 	public AudioSource soundSource;
 
@@ -16,5 +19,17 @@ public class AudioPlayer : MonoBehaviour {
 	public void Death() {
 		soundSource.clip = deathSound;
 		soundSource.Play();
+	}
+	public void Throw() {
+		soundSource.clip = projectile;
+		soundSource.Play ();
+	}
+	public void EnemyHurt() {
+		soundSource.clip = enemyHurt;
+		soundSource.Play ();
+	}
+	public void EnemyDeath() {
+		soundSource.clip = enemyDeath;
+		soundSource.Play ();
 	}
 }

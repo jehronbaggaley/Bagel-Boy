@@ -13,6 +13,7 @@ public class AudioPlayer : MonoBehaviour {
 	public AudioSource soundSource;
 
 	public void Hurt() {
+		Debug.Log ("hit");
 		soundSource.clip = hurtSound;
 		soundSource.Play();
 	}

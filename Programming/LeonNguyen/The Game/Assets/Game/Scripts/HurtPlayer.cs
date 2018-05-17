@@ -8,7 +8,6 @@ public class HurtPlayer : MonoBehaviour {
 
 	private void OnTriggerEnter (Collider other) {
 		if (other.gameObject.name == "PlayerController") {
-			Debug.Log ("hit");
 			Vector3 hitDirection = other.transform.position - transform.position;
 			hitDirection = hitDirection.normalized;
 

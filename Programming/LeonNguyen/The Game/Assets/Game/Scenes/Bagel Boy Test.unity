@@ -503,6 +503,11 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 765223628034a624195b360b761919d7, type: 3}
   m_PrefabInternal: {fileID: 534817238}
+--- !u!23 &93368517 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 765223628034a624195b360b761919d7,
+    type: 3}
+  m_PrefabInternal: {fileID: 534817238}
 --- !u!1 &150418221
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,7 +7513,7 @@ MonoBehaviour:
   currHealth: 0
   thePlayer: {fileID: 1293262622}
   InvincibilityLength: 0.5
-  playerRenderer: {fileID: 0}
+  playerRenderer: {fileID: 93368517}
   flashLength: 0.1
   playerHealth: {fileID: 1817430659}
   respawnLength: 1
@@ -7553,8 +7558,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1920ed2a0887140bd3743e2e745e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtSound: {fileID: 8300000, guid: e5bc1e85e67b50a498e1b2e28a02d4d1, type: 3}
-  deathSound: {fileID: 8300000, guid: 53eda777bb4fe1d47810b28c40127d5b, type: 3}
+  hurtSound: {fileID: 8300000, guid: d508f1df7a519184c94c25d4488c13e6, type: 3}
+  deathSound: {fileID: 8300000, guid: a381d40fd0537c543a320086a859ebf6, type: 3}
+  projectile: {fileID: 8300000, guid: 300b33e09260a3044ae4135250dc4857, type: 3}
+  enemyHurt: {fileID: 8300000, guid: ed23a5b8bd8ce6248927c1f08995be89, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 8237368863e795143a914f8d172e12b8, type: 3}
   soundSource: {fileID: 2121204660}
 --- !u!82 &2121204660
 AudioSource:
